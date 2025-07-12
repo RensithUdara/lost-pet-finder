@@ -252,8 +252,8 @@ export default function RecentPets() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {isLoading
             ? Array(3)
-                .fill(0)
-                .map((_, i) => <PetCardSkeleton key={i} />)
+              .fill(0)
+              .map((_, i) => <PetCardSkeleton key={i} />)
             : lostPets.map((pet) => <PetCard key={pet.id} pet={pet} />)}
         </div>
       </TabsContent>
@@ -262,8 +262,8 @@ export default function RecentPets() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {isLoading
             ? Array(3)
-                .fill(0)
-                .map((_, i) => <PetCardSkeleton key={i} />)
+              .fill(0)
+              .map((_, i) => <PetCardSkeleton key={i} />)
             : foundPets.map((pet) => <PetCard key={pet.id} pet={pet} />)}
         </div>
       </TabsContent>
@@ -295,9 +295,8 @@ function PetCard({ pet }: { pet: Pet }) {
             className="object-cover"
           />
           <Badge
-            className={`absolute top-2 right-2 ${
-              pet.status === "lost" ? "bg-coral-500 hover:bg-coral-600" : "bg-brand-500 hover:bg-brand-600"
-            }`}
+            className={`absolute top-2 right-2 ${pet.status === "lost" ? "bg-coral-500 hover:bg-coral-600" : "bg-brand-500 hover:bg-brand-600"
+              }`}
           >
             {pet.status === "lost" ? "Lost" : "Found"}
           </Badge>
