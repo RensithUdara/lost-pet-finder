@@ -146,9 +146,8 @@ function MatchCard({ match, currentPetStatus }: { match: PetMatch; currentPetSta
           className="object-cover"
         />
         <Badge
-          className={`absolute top-2 right-2 ${
-            matchType === "lost" ? "bg-coral-500 hover:bg-coral-600" : "bg-brand-500 hover:bg-brand-600"
-          }`}
+          className={`absolute top-2 right-2 ${matchType === "lost" ? "bg-coral-500 hover:bg-coral-600" : "bg-brand-500 hover:bg-brand-600"
+            }`}
         >
           {matchType === "lost" ? "Lost" : "Found"}
         </Badge>
