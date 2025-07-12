@@ -57,10 +57,10 @@ export default function PetEditForm({ petId, petData }: PetEditFormProps) {
   const [location, setLocation] = useState<{ address?: string; latitude: number; longitude: number } | null>(
     petData.location
       ? {
-          address: petData.location.address,
-          latitude: petData.location.latitude,
-          longitude: petData.location.longitude,
-        }
+        address: petData.location.address,
+        latitude: petData.location.latitude,
+        longitude: petData.location.longitude,
+      }
       : null,
   )
 
